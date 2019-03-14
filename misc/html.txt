@@ -1,0 +1,13 @@
+<div class="article_container">
+                <div class="article">
+                    <div class="pic"></div>
+                    <div class="articleinfo"></div>
+                </div>
+                <div class="article">
+                    <div class="articleinfo"></div>
+                </div>
+                <div class="article">
+                    <div class="articleinfo"></div>
+                </div>
+
+            </div>

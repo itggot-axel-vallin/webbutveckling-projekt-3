@@ -6,37 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    rel="stylesheet">
     <title>Bateri Brigaden!</title>
 </head>
 <body>
+
+    <!-- <audio src="music/Travis Scott - SICKO MODE ft_ Drake.mp3" autoplay loop></audio> -->
     
-    <nav class="nav">
-        <div class="close" onclick="showHamburger()"></div>
-    </nav>
-
-    <div class="wrapper">
-        <header>
-            <div class="hamburger" onclick="showHamburger()"> <i class="material-icons">menu</i> </div>
-            <div class="icon"> <i class="material-icons">battery_alert</i> </div>
-            <div class="hidden"></div>
-            
-        </header>
-        <main>
-            <div class="article_container">
-                <div class="article">
-                    <div class="articleinfo"></div>
+    <nav>
+        <div class="navicon" onclick="showHamburger()"> <i class="material-icons">battery_alert</i></div>
+        <div class="navmenu">
+            <ul>
+                <li>HOME</li>
+                <li onclick="showCategories()">CATEGORIES</li>
+                <div class="categorieshidden">
+                    <ul>
+                        <hr>
+                        <li>Small Batteries</li>
+                        <hr>
+                        <li>Medium Batteries</li>
+                        <hr>
+                        <li>Big Batteries</li>
+                        <hr>
+                    </ul>
                 </div>
-                <div class="article">
-                    <div class="articleinfo"></div>
-                </div>
-                <div class="article">
-                    <div class="articleinfo"></div>
-                </div>
-
-            </div>
-        </main>
+                <li>CART</li>
+            </ul>
     </div>
+    <div class="navhiddenbutton"></div>
+</nav>
+
+<div class="wrapper">
+    <header>
+        <div class="hamburger" onclick="showHamburger()"> <i class="material-icons">menu</i> </div>
+        <div class="icon"> <i class="material-icons">battery_alert</i> </div>
+        <div class="hidden"></div>
+        
+    </header>
+    <main>
+        <div class="feedwrapper">
+            <div class="feed">
+                <div class="bigfeedbox">
+                    <div class="bigfeedpic"></div>
+                </div>
+                <div class="feedbanner"> New Releases!</div>
+                <div class="feedbox">
+                    <div class="feedboxinfo"></div>
+                </div>
+                <div class="feedbox">
+                    <div class="feedboxinfo"></div>
+                </div>
+                <div class="bigfeedbox">
+                    <div class="bigfeedpic"></div>
+                    <div class="bigfeedinfo"></div>
+                </div>
+                <div class="feedbanner"> Most Popular!</div>
+                <div class="feedbox">
+                    <div class="feedboxinfo"></div>
+                </div>
+                <div class="feedbox">
+                    <div class="feedboxinfo"></div>
+                </div>
+                <div class="feedbox">
+                    <div class="feedboxinfo"></div>
+                </div>
+                <div class="feedbox">
+                    <div class="feedboxinfo"></div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </main>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>
