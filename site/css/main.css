@@ -22,7 +22,6 @@ header{
 
 .feedwrapper{
     margin:10px 0 30px 0;
-
 }
 
 .feed{
@@ -31,8 +30,12 @@ header{
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* margin: 10px; */
-    
+    /* margin: 10px; */ 
+}
+
+.feed h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #505050
 }
 
 .feedbanner{
@@ -87,7 +90,19 @@ header{
     height: 300px;
     width: 300px;
     border: #505050 1px solid;
-    
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas:
+    'pic'
+    'info';
+}
+
+.bigfeedinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: info;
+    background-color: #505050;
 }
 
 
@@ -177,7 +192,6 @@ nav{
     width:100px;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-       
 }
 
 .navmenu ul{
@@ -202,6 +216,11 @@ nav{
 
 .categorieshidden{
     display: none;
+}
+
+.navmenu a{
+    color: white;
+    text-decoration: none;
 }
 
 .categorieshidden hr{
@@ -259,4 +278,166 @@ main{
 .pic{
     grid-area: pic;
     background-color: lightblue;
+}
+
+.cartwrapper{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.carttitle{
+    font-size: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    color: #505050;
+}
+
+.cart{
+    margin-top: 50px;
+    border: 1px solid #505050;
+    height: 350px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.cartbuttons{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    width: 100%;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 120px;
+    background-color: #505050;
+}
+
+.back p{
+    justify-content: center;
+}
+
+.checkout{
+    height: 50px;
+    width: 120px;
+    background-color: #2ADE4E;
+}
+
+.cartitem{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.itempic{
+    border: 1px solid #505050;
+    height: 75px;
+    width: 75px;
+    margin-left: 10px;
+}
+
+.iteminfo{
+    /* background-color: grey; */
+    height: 75px;
+    width: 195px;
+    margin: 0 10px 0 10px;
+    display: flex;
+    border: 1px solid #505050;
+}
+
+.iteminfotext{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.iteminfo p{
+    margin: 0px;
+    color: #505050;
+}
+
+.iteminfo p:last-child{
+    margin-bottom: 5px;
+}
+
+.iteminfotext h1{
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.deleteitem i{
+    font-size: 2rem;
+    color: red;
+}
+
+.deleteitem{
+    margin-right: 10px;
+    width: 73px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart hr{
+    width: 75%
+}
+
+.back a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.bigfeedinfotext p{
+    text-align: center;
+    color: white;
+    margin: 0;
+    margin-top: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.info{
+    height: 30px;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #505050;
+    background-color: white;
+}
+
+.add{
+    height: 30px;
+    color: white;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2ADE4E;
+}
+
+.bigfeedinfobuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0px 60px 5px 60px;
 }
