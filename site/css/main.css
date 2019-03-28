@@ -1,443 +1,526 @@
+
 body{
     height: 100vh;
     padding: 0;
     margin: 0;
 }
 
-.wrapper{
-    width: 100vw;
+@media only screen and (min-width: 1px){
+
+    .wrapper{
+        width: 100vw;
+    }
+
+    header{
+        /* background-color: white; */
+        /* width: 375px; */
+        grid-area: header;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px;
+        position: sticky;
+        top: 0;
+    }
+
+    .feedwrapper{
+        margin:10px 0 30px 0;
+    }
+
+    .feed{
+        width: 300px;
+        justify-content: center;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* margin: 10px; */ 
+    }
+
+    .feedbannerboxwrapper{
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .feed h1{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #505050
+    }
+
+    .feedbanner{
+        width: 300px;
+        height: 80px;
+        border: 1px #505050 solid;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight:bold; 
+        font-size: 2rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        background-color: #505050;
+    }
+
+    .feedbox{
+        margin-top: 20px;
+        margin-right: 0;
+        height: 140px;
+        width: 140px;
+        border: #505050 1px solid;
+    }
+
+    .feedbox:nth-child(2){
+        margin-right: auto;
+    }
+
+    .feedbox:nth-child(3){
+        margin-left: auto;
+    }
+
+    .feedbox:nth-child(4){
+        margin-right: auto;
+    }
+
+    .feedbox:nth-child(5){
+        margin-left: auto;
+    }
+
+    .bigfeedbox{
+        margin-top: 20px;
+        height: 300px;
+        width: 300px;
+        border: #505050 1px solid;
+        display: grid;
+        grid-template-rows: 3fr 1fr;
+        grid-template-areas:
+        'pic'
+        'info';
+    }
+
+    .bigfeedinfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-area: info;
+        background-color: #505050;
+    }
+
+
+
+    .hamburger{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hamburger i{
+        font-size: 50px;
+        color: #505050;
+    }
+
+    .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: #505050;
+        color: white;
+        box-shadow: 0px 5px 5px 0px rgba(80,80,80,0.5);
+
+    }
+
+    .icon i{
+        font-size: 50px;
+    }
+
+
+
+    .hidden{
+        height: 50px;
+        width: 50px;
+    }
+
+    nav{
+        position: fixed;
+        height: 100%;
+        background-color: #505050;
+        width: 50%;   
+        left: -100%;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column
+    }
+
+    .navhidden{
+        left: 0;
+        z-index: 1;
+    }
+
+
+    .navicon{
+        background-color: white;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        
+    }
+
+    .navicon i{
+        color: #505050;
+        font-size: 50px;
+    }
+
+    .navhiddenbutton{
+        height: 100px;
+        width: 100px;
+        margin-bottom: 25px;
+    }
+
+    .navmenu{
+        
+        display: flex;
+        align-items: center;
+        height: 100px;
+        width:100px;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .navmenu ul{
+        list-style-type: none;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+
+    .navmenu li{
+        margin-top: 20px;
+    }
+
+    .navmenu li:first-child {
+        margin-top:0;
+    }
+
+    .categorieshidden{
+        display: none;
+    }
+
+    .navmenu a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .categorieshidden hr{
+        width: 75px;
+    }
+
+    .categorieshidden li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .categoriesshow{
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    main{
+        grid-area: main;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .article_container{
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .article{
+        height: 300px;
+        width: 300px;
+        border-color: #505050;
+        border-style: solid;
+        border-width: 1px;
+        display: grid;
+        grid-template-rows: 3fr 1fr;
+        grid-template-areas:
+        'pic'
+        'info';
+        margin-bottom: 15px;
+    }
+
+    .articleinfo{
+        background-color: #505050;
+        grid-area: info;
+    }
+
+    .pic{
+        grid-area: pic;
+        background-color: lightblue;
+    }
+
+    .cartwrapper{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 35px;
+    }
+
+    .carttitle{
+        font-size: 3rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        color: #505050;
+    }
+
+    .cart{
+        margin-top: 50px;
+        border: 1px solid #505050;
+        height: 350px;
+        width: 100%;
+        overflow-y: scroll;
+    }
+
+    .cartbuttons{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+        width: 100%;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .back{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 120px;
+        background-color: #505050;
+    }
+
+    .back p{
+        justify-content: center;
+    }
+
+    .checkout{
+        height: 50px;
+        width: 120px;
+        background-color: #2ADE4E;
+    }
+
+    .cartitem{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 6px;
+    }
+
+    .itempic{
+        border: 1px solid #505050;
+        height: 75px;
+        width: 75px;
+        margin-left: 10px;
+    }
+
+    .iteminfo{
+        /* background-color: grey; */
+        height: 75px;
+        width: 195px;
+        margin: 0 10px 0 10px;
+        display: flex;
+        white-space: nowrap;
+        border: 1px solid #505050;
+    }
+
+    .iteminfotext{
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .iteminfo p{
+        margin: 0px;
+        color: #505050;
+    }
+
+    .iteminfo p:last-child{
+        margin-bottom: 5px;
+    }
+
+    .iteminfotext h1{
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .deleteitem i{
+        font-size: 2rem;
+        color: red;
+    }
+
+    .deleteitem{
+        margin-right: 10px;
+        width: 73px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cart hr{
+        width: 75%
+    }
+
+    .back a{
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .bigfeedinfotext p{
+        text-align: center;
+        color: white;
+        margin: 0;
+        margin-top: 5px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .info{
+        height: 30px;
+        width: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #505050;
+        background-color: white;
+    }
+
+    .add{
+        height: 30px;
+        color: white;
+        width: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2ADE4E;
+    }
+
+    .bigfeedinfobuttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin:0px 60px 5px 60px;
+    }
 }
 
-header{
-    /* background-color: white; */
-    /* width: 375px; */
-    grid-area: header;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px;
-    position: sticky;
-    top: 0;
-}
-
-.feedwrapper{
-    margin:10px 0 30px 0;
-}
-
-.feed{
-    width: 300px;
-    justify-content: center;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    /* margin: 10px; */ 
-}
-
-.feed h1{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #505050
-}
-
-.feedbanner{
-    width: 300px;
-    height: 80px;
-    border: 1px #505050 solid;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight:bold; 
-    font-size: 2rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-    background-color: #505050;
-}
-
-.feedbox{
-    margin-top: 20px;
-    height: 140px;
-    width: 140px;
-    border: #505050 1px solid;
-}
-
-.feedbox:nth-child(3){
-    margin-right: auto;
-}
-
-.feedbox:nth-child(4){
-    margin-left: auto;
-}
-
-.feedbox:nth-child(7){
-    margin-right: auto;
-}
-
-.feedbox:nth-child(8){
-    margin-left: auto;
-}
-
-.feedbox:nth-child(9){
-    margin-right: auto;
-}
-
-.feedbox:nth-child(10){
-    margin-left: auto;
-}
-
-.bigfeedbox{
-    margin-top: 20px;
-    height: 300px;
-    width: 300px;
-    border: #505050 1px solid;
-    display: grid;
-    grid-template-rows: 3fr 1fr;
-    grid-template-areas:
-    'pic'
-    'info';
-}
-
-.bigfeedinfo{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    grid-area: info;
-    background-color: #505050;
-}
-
-
-
-.hamburger{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hamburger i{
-    font-size: 50px;
-    color: #505050;
-}
-
-.icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: #505050;
-    color: white;
-    box-shadow: 0px 5px 5px 0px rgba(80,80,80,0.5);
-
-}
-
-.icon i{
-    font-size: 50px;
-}
-
-
-
-.hidden{
-    height: 50px;
-    width: 50px;
-}
-
-nav{
-    position: fixed;
-    height: 100%;
-    background-color: #505050;
-    width: 50%;   
-    left: -100%;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column
-}
-
-.navhidden{
-    left: 0;
-    z-index: 1;
-}
-
-
-.navicon{
-    background-color: white;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
+@media only screen  and (min-width : 1224px) {
     
-}
+    nav{
+        left: 0;
+        width: 10%;
+    }
 
-.navicon i{
-    color: #505050;
-    font-size: 50px;
-}
+    .hamburger{
+        visibility: hidden;
+    }
 
-.navhiddenbutton{
-    height: 100px;
-    width: 100px;
-    margin-bottom: 25px;
-}
+    .feedwrapper{
+        /* margin: 10px 0 30px 10%; */
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.navmenu{
-    
-    display: flex;
-    align-items: center;
-    height: 100px;
-    width:100px;
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+    .feedbox{
+        width: 300px;
+        height: 250px;;
+    }
 
-.navmenu ul{
-    list-style-type: none;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    width: 100%;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.4rem;
-}
+    .feed{
+        align-items: center;
+        width: 1000px;
+    }
 
-.navmenu li{
-    margin-top: 20px;
-}
+    .bigfeedbox{
+        
+        height: 550px;
+        width: 550px;
+        margin-bottom: 50px;
+    }
 
-.navmenu li:first-child {
-    margin-top:0;
-}
+    .feedbannerboxwrapper{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        height: 550px;
+        margin-top: 20px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+        flex-wrap: nowrap;
+    }
 
-.categorieshidden{
-    display: none;
-}
+    .feedbannerboxwrapper:nth-child(3){
+        margin: 20px 50px 50px 0;
+    }
 
-.navmenu a{
-    color: white;
-    text-decoration: none;
-}
+    .feedbanner{
+        margin-top: 0;
+    }
 
-.categorieshidden hr{
-    width: 75px;
-}
+    .feedbox:nth-child(2){
+        margin-right: 0;
+    }
 
-.categorieshidden li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
+    .feedbox:nth-child(3){
+        margin-left: 0;
+    }
 
-.categoriesshow{
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
+    .feedbox:nth-child(5){
+        display: none;    
+    }
 
-main{
-    grid-area: main;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
+    .feedbox:nth-child(4){    
+        display: none;
+    }
 
-.article_container{
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
-    padding: 25px;
-    display: flex;
-    justify-content: center;
-}
-
-.article{
-    height: 300px;
-    width: 300px;
-    border-color: #505050;
-    border-style: solid;
-    border-width: 1px;
-    display: grid;
-    grid-template-rows: 3fr 1fr;
-    grid-template-areas:
-    'pic'
-    'info';
-    margin-bottom: 15px;
-}
-
-.articleinfo{
-    background-color: #505050;
-    grid-area: info;
-}
-
-.pic{
-    grid-area: pic;
-    background-color: lightblue;
-}
-
-.cartwrapper{
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 35px;
-}
-
-.carttitle{
-    font-size: 3rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    color: #505050;
-}
-
-.cart{
-    margin-top: 50px;
-    border: 1px solid #505050;
-    height: 350px;
-    width: 100%;
-    overflow-y: scroll;
-}
-
-.cartbuttons{
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
-    width: 100%;
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    text-align: center;
-}
-
-.back{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 120px;
-    background-color: #505050;
-}
-
-.back p{
-    justify-content: center;
-}
-
-.checkout{
-    height: 50px;
-    width: 120px;
-    background-color: #2ADE4E;
-}
-
-.cartitem{
-    height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-top: 6px;
-}
-
-.itempic{
-    border: 1px solid #505050;
-    height: 75px;
-    width: 75px;
-    margin-left: 10px;
-}
-
-.iteminfo{
-    /* background-color: grey; */
-    height: 75px;
-    width: 195px;
-    margin: 0 10px 0 10px;
-    display: flex;
-    border: 1px solid #505050;
-}
-
-.iteminfotext{
-    justify-content: space-evenly;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.iteminfo p{
-    margin: 0px;
-    color: #505050;
-}
-
-.iteminfo p:last-child{
-    margin-bottom: 5px;
-}
-
-.iteminfotext h1{
-    font-size: 1rem;
-    margin-top: 5px;
-}
-
-.deleteitem i{
-    font-size: 2rem;
-    color: red;
-}
-
-.deleteitem{
-    margin-right: 10px;
-    width: 73px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.cart hr{
-    width: 75%
-}
-
-.back a{
-    color: white;
-    text-decoration: none;
-}
-
-
-.bigfeedinfotext p{
-    text-align: center;
-    color: white;
-    margin: 0;
-    margin-top: 5px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.info{
-    height: 30px;
-    width: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #505050;
-    background-color: white;
-}
-
-.add{
-    height: 30px;
-    color: white;
-    width: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2ADE4E;
-}
-
-.bigfeedinfobuttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin:0px 60px 5px 60px;
+    .feedwrapper h1{
+        color: #505050;
+        
+    }
 }
