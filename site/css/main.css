@@ -105,11 +105,7 @@ body{
         height: 300px;
         width: 300px;
         border: #505050 1px solid;
-        display: grid;
-        grid-template-rows: 3fr 1fr;
-        grid-template-areas:
-        'pic'
-        'info';
+        
     }
 
     .bigfeedinfo{
@@ -152,6 +148,21 @@ body{
         color: #505050;
     }
 
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 0;
+    }
+    
+    .fade-layer.visible{
+        display: block;
+    }
+
     .icon{
         display: flex;
         justify-content: center;
@@ -182,7 +193,7 @@ body{
         background-color: #505050;
         width: 50%;   
         left: -100%;
-        z-index: 1;
+        z-index: 2;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -384,6 +395,9 @@ body{
         height: 75px;
         width: 75px;
         margin-left: 10px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
 
     .iteminfo{
@@ -521,6 +535,7 @@ body{
         width: 250px;
         height: 200px;
         border: 1px solid #505050;
+        margin-bottom: 50px;
     }
 
     .articlesite{
@@ -533,6 +548,13 @@ body{
 
     .articlepicarrows{
         text-align: center;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between
+    }
+
+    .articlepicarrows i{
+        margin: 0 10px 0 10px;
     }
 
     .articlesitebuttons{
@@ -542,17 +564,6 @@ body{
         margin-bottom: 50px;
     }
 
-    .size{
-        border: #505050 1px solid;
-        color: #505050;
-        height: 36.5px;
-        width: 74px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-    }
 
     .addarticle{
         height: 37.5px;
@@ -582,8 +593,45 @@ body{
         align-items: center;
     }
 
-    .articlesitebuttons{
+    .articlesitebuttons a{
         text-decoration: none;
+    }
+
+    .bigpic{
+        height: 450px;
+        width: 250px;
+        border: #505050 1px solid;
+        display: flex;
+        flex-direction: unset;
+        justify-content: center;
+    }
+
+    .articlesiteinfotitle{
+        display: flex;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #505050;
+    }
+
+    .articletitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        color: #505050;
+    }
+
+    .articleprice{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        color: #505050;
+        font-size: 0.75rem;
     }
 
 }
@@ -716,4 +764,78 @@ body{
     .desktophide{
         display: none;
     }
+
+    .articlewrapper{
+        width: 75%
+    }
+
+    .articlesite{
+        width: 100%;
+        flex-direction: unset;
+        justify-content: center;
+    }
+
+    .piccollage{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .pictrio{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+    
+    .articlepic{
+        height: 125px;
+        width: 100px;   
+    }
+
+    .backarticle{
+        display: none;
+    }
+    
+    select{
+        width: 75px;
+    }
+
+    .articlesiteinfo{
+        width: 100%;
+        height: 225px
+    }
+
+    .articlesiteinfo p{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #505050;
+        padding: 5px;
+    }
+
+    .articlesitecontent{
+        width: 200px;
+        margin-left: 50px;
+        height: 450px;
+    }
+
+    .articlesitebuttons{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    
+    
+    
+    .hrvertical{
+        width: 0.5px;
+        margin: 0 0 0 50px;
+        background-color: #505050;
+        height: 500px;
+
+    }
+
+    .bigpic{
+        
+    }
+
+    
+    
 }

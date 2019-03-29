@@ -32,6 +32,9 @@
         </div>
         <div class="navhiddenbutton"></div>
     </nav>
+
+    <div class="fade-layer" onclick="showHamburger()"></div>
+
     <div class="wrapper">
         <header>
             <div class="hamburger" onclick="showHamburger()"> <i class="material-icons">menu</i> </div>
@@ -41,23 +44,64 @@
         <main>
             <div class="articlewrapper">
                 <div class="articlesite">
-                    <div class="articlepic">
-                        <div class="articlepicarrows">
-                            <h2>pic</h2>
+                    <div class="piccollage">
+                        <div class="bigpic">
+                            <img src="img/small_battery_article_250x450.png" alt="">
+                        </div>
+                        <div class="articlepicarrows desktophide">
                             <i class="material-icons">keyboard_arrow_left</i>
                             <i class="material-icons">keyboard_arrow_right</i>
                             
                         </div>
-                    </div>
-                    <div class="articlesitebuttons">
-                        <a href="index.html">
-                            <div class="backarticle"> <i class="material-icons">arrow_back</i></div>
-                        </a>
-                        <div class="size">
-                            <p>Size</p>
-                            <i class="material-icons">keyboard_arrow_down   </i>
+                        <div class="pictrio mobilehide">
+                            <div class="articlepic">
+                                <img src="img/small_battery_small_article_100x125.png" alt="">
+                            </div>
+                            <div class="articlepic">
+                                <img src="img/small_battery_small_article_100x125.png" alt="">
+                            </div>
+                            <div class="articlepic">
+                                <img src="img/small_battery_small_article_100x125.png" alt="">
+                            </div>
+                           
                         </div>
-                        <div class="addarticle"> <i class="material-icons">shopping_cart</i></div>
+                    </div>
+                    <hr class="hrvertical">
+                    <div class="articlesitecontent">
+                        <div class="articletitle">
+                            <h2>
+                                Small Battery
+                            </h2>
+                        </div>
+                        <div class="articleprice">
+                            <h2>
+                                $1
+                            </h2>
+                        </div>
+                        
+                        <div class="articlesitebuttons">
+                            <a href="index.html" class="desktophide">
+                                <div class="backarticle"> <i class="material-icons">arrow_back</i></div>
+                            </a>
+                            <select>
+                                <option value="Amount">Amount</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+
+                            </select>
+                            <a href="cart.html">
+                                <div class="addarticle"> <i class="material-icons">shopping_cart</i></div>
+                            </a>
+                        </div>
+                        <div class="articlesiteinfotitle">
+                            <p>Description</p>
+                        </div>
+                        <div class="articlesiteinfo">
+                            <p>
+                                This battery is really small and also really a battery!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
